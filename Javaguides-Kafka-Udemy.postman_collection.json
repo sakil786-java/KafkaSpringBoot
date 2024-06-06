@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "e7cc049e-9b9b-4da6-bd01-a18333b5525e",
+		"name": "Javaguides-Kafka-Udemy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19538557"
+	},
+	"item": [
+		{
+			"name": "String Message",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/kafka/publish?message=Testing String Message",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"kafka",
+						"publish"
+					],
+					"query": [
+						{
+							"key": "message",
+							"value": "Testing String Message"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JSON Message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"firstName\": \"Jane\",\r\n    \"lastName\": \"Smith\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/kafka/publish",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"kafka",
+						"publish"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
